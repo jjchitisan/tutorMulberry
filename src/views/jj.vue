@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1>Home</h1>
+
   </div>
 </template>
 
@@ -9,7 +10,7 @@ import HelloWorld from '../components/HelloWorld';
 
 export default {
   components: {
-    HelloWorld,
+
   },
 };
 </script>

@@ -1,15 +1,15 @@
 <template>
   <div>
     <h1>Home</h1>
+    <router-link :to="{name: 'jj'}">jj</router-link>
   </div>
 </template>
 
 <script>
-import HelloWorld from '../components/HelloWorld';
 
 export default {
   components: {
-    HelloWorld,
+
   },
 };
 </script>
