@@ -3,6 +3,7 @@
     <v-toolbar flat app color="#FFFFFF">
         <v-toolbar-title class="text-uppercase green--text">
             <v-app-bar-nav-icon></v-app-bar-nav-icon>
+
             <span class="font-weight-light">tutor</span>
             <span>Mulberry</span>
         </v-toolbar-title>
