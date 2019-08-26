@@ -6,10 +6,11 @@
   <div>
     <v-container>
       <router-link :to="{name: 'not'}">ครู/วิชา</router-link>
+
       <v-row>
         <v-col v-for=" img in 4">
 
-            <v-img :src="require('@/assets/Eng.png')" style="width: 160px;height: 160px"></v-img>
+            <v-img :src="require('@/assets/logo.png')" style="width: 160px;height: 160px"></v-img>
         </v-col>
       </v-row>
     </v-container>
@@ -27,7 +28,7 @@
             src: 'https://f.ptcdn.info/158/012/000/1384503471-5266374834-o.jpg',
           },
           {
-            src: require('@/assets/Eng.png'),
+            src: require('@/assets/logo.png'),
           },
           {
             src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',

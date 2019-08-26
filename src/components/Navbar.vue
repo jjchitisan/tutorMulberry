@@ -6,10 +6,10 @@
 
             <span class="font-weight-light">tutor</span>
             <span>Mulberry</span>
-        </v-toolbar-title>
+        </v-toolbar-title >
         <v-icon>fas fa-list</v-icon>
         <v-spacer></v-spacer>
-
+        <router-link :to="{name: 'login'}">login</router-link>
             <v-icon>{{ icons.mdiAccount }}</v-icon>
     </v-toolbar>
 </nav>
