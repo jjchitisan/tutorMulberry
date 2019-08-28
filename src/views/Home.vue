@@ -9,12 +9,12 @@
         <v-flex xx6>
             <v-layout row wrap fill-height justify-center align-center >
                 <v-card style="padding:5%; border-radius:50px;">
-                <div v-if="Status">
+              <center>  <div v-if="Status">
                     <img :src="user.img" alt="" >
                     <h2>Name : {{user.name}}</h2>
                     
                 </div>
-               
+              </center>
             <center>
                 <facebook-login class="button" appId="406364773336885" @sdk-loaded="loadFacebook" @login="loginFacebook" @logout="logoutFacebook" @get-initial-status="getFacebookProfile">
     </facebook-login>

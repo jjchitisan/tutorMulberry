@@ -7,18 +7,13 @@
         >
             <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
-            <v-toolbar-title class="text-uppercase "></v-toolbar-title>
-            <span color="#FF3D00">Tutor</span>
+            <v-toolbar-title ></v-toolbar-title>
+            <v-btn dark @click="$router.push('/')"  class="text-uppercase deep-purple--text darken-4" color="transparent" text >Tutormulberry</v-btn>
             <div class="flex-grow-1">
 
             </div>
 
-            <v-btn icon>
-                <v-icon class="text-uppercase green--text">mdi-heart</v-icon>
-
-
-            </v-btn>
-
+           
             <v-btn icon>
                 <v-icon class="text-uppercase green--text">mdi-magnify</v-icon>
             </v-btn>
