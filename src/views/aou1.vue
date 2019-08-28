@@ -34,7 +34,7 @@
               v-else
               :key="item.title"
               ripple
-              @click=""
+              
             >
               <v-list-item-avatar>
                 <img :src="item.avatar">
