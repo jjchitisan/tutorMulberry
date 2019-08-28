@@ -1,18 +1,54 @@
 <template>
-<nav>
-    <v-toolbar flat app color="#FFFFFF">
-        <v-toolbar-title class="text-uppercase green--text">
+    <nav>
+        <v-app-bar absolute
+                color="rgb(0,0,0,0)"
+                dense
+                   class="elevation-0"
+        >
             <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
-            <span class="font-weight-light">tutor</span>
-            <span>Mulberry</span>
-        </v-toolbar-title >
-        <v-icon>fas fa-list</v-icon>
-        <v-spacer></v-spacer>
-        <router-link :to="{name: 'login'}">login</router-link>
-            <v-icon>{{ icons.mdiAccount }}</v-icon>
-    </v-toolbar>
-</nav>
+            <v-toolbar-title class="text-uppercase green--text">Tutor Mulberry</v-toolbar-title>
+
+            <div class="flex-grow-1">
+
+            </div>
+
+            <v-btn icon>
+                <v-icon class="text-uppercase green--text">mdi-heart</v-icon>
+                <router-link :to="{name: 'hello'}">not</router-link>
+
+            </v-btn>
+
+            <v-btn icon>
+                <v-icon class="text-uppercase green--text">mdi-magnify</v-icon>
+            </v-btn>
+
+            <v-menu
+                    left
+                    bottom
+            >
+                <template v-slot:activator="{ on }">
+                    <v-btn icon v-on="on">
+                        <v-icon class="text-uppercase green--text">mdi-dots-vertical</v-icon>
+
+                    </v-btn>
+                </template>
+
+                <v-list>
+                    <v-list-item
+                            v-for="n in 5"
+                            :key="n"
+                            @click="() => {}"
+                    >
+                        <v-list-item-title>Option {{ n }}</v-list-item-title>
+                    </v-list-item>
+                </v-list>
+            </v-menu>
+        </v-app-bar>
+
+
+
+    </nav>
 </template>
 
 
@@ -20,14 +56,13 @@
 
 
 <script>
-    import  { mdiAccount } from '@mdi/js'
+
 
     export default {
-        data: () => ({
-            icons: {
-                mdiAccount,
-
-            },
-        }),
+        data() {
+            return {
+                
+            }
+        }
     }
 </script>
