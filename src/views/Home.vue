@@ -1,49 +1,109 @@
 <template>
-  <div >
-  <v-carousel >
-    <v-carousel-item v-for="(item,i) in items" :key="i" :src="item.src" reverse-transition="fade-transition" transition="fade-transition"></v-carousel-item>
-  </v-carousel>
-  <div>
-    <v-container>
-      <router-link :to="{name: 'not'}">ครู/วิชา</router-link>
-
-      <v-row>
-        <v-col v-for=" img in 4">
-
-            <v-img :src="require('@/assets/logo.png')" style="width: 160px;height: 160px"></v-img>
-        </v-col>
-      </v-row>
-    </v-container>
-  </div>
-<!--    https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg-->
-  </div>
+<div class="bg">
+    <v-layout row wrap style="height:100vh; width: 100vw;">
+        <v-flex xx6 >
+            <v-layout row wrap fill-height justify-center align-center>
+                <img src="" alt="">
+            </v-layout>
+        </v-flex>    
+        <v-flex xx6>
+            <v-layout row wrap fill-height justify-center align-center >
+                <v-card style="padding:5%; border-radius:50px;">
+                <div v-if="Status">
+                    <img :src="user.img" alt="" >
+                    <h2>Name : {{user.name}}</h2>
+                    
+                </div>
+               
+            <center>
+                <facebook-login class="button" appId="406364773336885" @sdk-loaded="loadFacebook" @login="loginFacebook" @logout="logoutFacebook" @get-initial-status="getFacebookProfile">
+    </facebook-login>
+            </center>
+            </v-card>
+            </v-layout>
+        </v-flex>    
+    </v-layout>
+    </div>
 </template>
 
 <script>
-  export default {
-    data () {
-      return {
-        items: [
-          {
-            src: 'https://f.ptcdn.info/158/012/000/1384503471-5266374834-o.jpg',
-          },
-          {
-            src: require('@/assets/logo.png'),
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
-          },
-        ],
-      }
-    },
-  }
+ import facebookLogin from 'facebook-login-vuejs';
+
+ export default {
+     name: 'Root',
+     /*-------------------------Load Component---------------------------------------*/
+     components: {
+         facebookLogin
+     },
+     /*-------------------------Set Component---------------------------------------*/
+     props: {
+
+     },
+     /*-------------------------DataVarible---------------------------------------*/
+     data() {
+         return {
+             Facebook: {},
+             Status: false,
+             user: {},
+         };
+     },
+     /*-------------------------Run Methods when Start this Page------------------------------------------*/
+     async mounted() {
+         /**** Call loading methods*/
+         this.load();
+     },
+     /*-------------------------Run Methods when Start Routed------------------------------------------*/
+     async beforeRouteEnter(to, from, next) {
+         next()
+     },
+     /*-------------------------Vuex Methods and Couputed Methods------------------------------------------*/
+     computed: {
+
+     },
+     /*-------------------------Methods------------------------------------------*/
+     methods: {
+         loginFacebook(){
+              this.Status = true;
+              this.getFacebookProfile();
+         },
+         logoutFacebook() {
+             this.Status = false;
+             this.user = {};
+         },
+         getFacebookProfile() {
+             try {
+                 this.Facebook.api('/me', 'GET', {
+                         fields: 'id,name,email'
+                     },
+                     userInformation => {
+                          
+                         this.user = userInformation;
+                         this.user.img = `https://graph.facebook.com/${userInformation.id}/picture?type=large`;
+                     } 
+                 )
+             } catch (error) {
+
+             }
+
+         },
+         loadFacebook(facebook) {
+             console.log('[open api]', facebook);
+             this.Facebook = facebook.FB
+             if (facebook.isConnected) {
+                 this.Status = true;
+                 this.getFacebookProfile();
+             }
+         },
+         /******* Methods default run ******/
+         load: async function () {}
+     },
+ }
 </script>
 <style>
-
+.bg {
+  
+background-image: url('../assets/bg.jpg');
+background-attachment: fixed;
+background-size: cover;
+}
 </style>
