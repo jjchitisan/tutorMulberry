@@ -65,6 +65,7 @@
          loginFacebook(){
               this.Status = true;
               this.getFacebookProfile();
+              location.reload()
          },
          logoutFacebook() {
              this.Status = false;
@@ -92,10 +93,12 @@
              if (facebook.isConnected) {
                  this.Status = true;
                  this.getFacebookProfile();
+                 
              }
          },
          /******* Methods default run ******/
-         load: async function () {}
+         load: async function () { 
+         }
      },
  }
 </script>
