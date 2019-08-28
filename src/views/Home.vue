@@ -11,7 +11,8 @@
                 <v-card style="padding:5%; border-radius:50px;">
                 <div v-if="Status">
                     <img :src="user.img" alt="" >
-                    
+                    <h2>Name : {{user.name}}</h2>
+                    <h3>Email : {{user.email}}</h3>
                 </div>
                
             <center>
