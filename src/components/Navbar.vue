@@ -8,14 +8,14 @@
             <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
             <v-toolbar-title class="text-uppercase green--text">Tutor Mulberry</v-toolbar-title>
-
+            <router-link :to="{name: 'hello'}">not</router-link>
             <div class="flex-grow-1">
 
             </div>
 
             <v-btn icon>
                 <v-icon class="text-uppercase green--text">mdi-heart</v-icon>
-                <router-link :to="{name: 'hello'}">not</router-link>
+
 
             </v-btn>
 

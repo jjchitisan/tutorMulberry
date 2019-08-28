@@ -10,8 +10,8 @@
             <v-layout row wrap fill-height justify-center align-center >
                 <v-card style="padding:5%; border-radius:50px;">
                 <div v-if="Status">
-                    <img :src="user.img" alt="">
-                    <pre>{{user}}</pre>
+                    <img :src="user.img" alt="" >
+                    
                 </div>
                
             <center>

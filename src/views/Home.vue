@@ -1,178 +1,108 @@
-<template xmlns="http://www.w3.org/1999/html">
-  <div>
-    
-    <v-carousel hide-delimiters="true">
-      <v-carousel-item v-for="(item,i) in items" :key="i" :src="item.src" reverse-transition="fade-transition"
-                       transition="fade-transition" ></v-carousel-item>
-    </v-carousel>
-    <div>
-
-
-      <v-container grid-list-xl>
-        <v-row>
-          <v-col cols="3">
-            <v-card class="mx-auto" max-width="400">
-              <v-img
-                      class="white--text"
-                      height="200px"
-                      src="https://buddyjourneytourthailand.com/wp-content/uploads/2017/03/Paxa7aH-1024x576.jpg"
-              >
-                <v-card-title class="align-end fill-height">Top 10 Australian beaches</v-card-title>
-              </v-img>
-
-              <v-card-text>
-                <br>
-                <span class="text--primary"><span>Whitehaven Beach</span><br><span>Whitsunday Island, Whitsunday Islands</span></span>
-              </v-card-text>
-
-              <v-card-actions>
-                <v-btn text color="orange">
-                  Share
-                </v-btn>
-                <v-btn text color="orange">
-                  Explore
-                </v-btn>
-              </v-card-actions>
+<template>
+<div class="bg">
+    <v-layout row wrap style="height:100vh; width: 100vw;">
+        <v-flex xx6 >
+            <v-layout row wrap fill-height justify-center align-center>
+                <img src="" alt="">
+            </v-layout>
+        </v-flex>    
+        <v-flex xx6>
+            <v-layout row wrap fill-height justify-center align-center >
+                <v-card style="padding:5%; border-radius:50px;">
+                <div v-if="Status">
+                    <img :src="user.img" alt="" >
+                    
+                </div>
+               
+            <center>
+                <facebook-login class="button" appId="406364773336885" @sdk-loaded="loadFacebook" @login="loginFacebook" @logout="logoutFacebook" @get-initial-status="getFacebookProfile">
+    </facebook-login>
+            </center>
             </v-card>
-
-          </v-col>
-          <v-col cols="3">
-            <v-card class="mx-auto" max-width="400">
-              <v-img
-                      class="white--text"
-                      height="200px"
-                      src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
-              >
-                <v-card-title class="align-end fill-height">Top 10 Australian beaches</v-card-title>
-              </v-img>
-
-              <v-card-text>
-                <span>Number 10</span><br>
-                <span class="text--primary">
-        <span>Whitehaven Beach</span><br>
-        <span>Whitsunday Island, Whitsunday Islands</span>
-      </span>
-              </v-card-text>
-
-              <v-card-actions>
-                <v-btn
-                        text
-                        color="orange"
-                >
-                  Share
-                </v-btn>
-                <v-btn
-                        text
-                        color="orange"
-                >
-                  Explore
-                </v-btn>
-              </v-card-actions>
-            </v-card>
-
-          </v-col>
-          <v-col cols="3">
-            <v-card class="mx-auto" max-width="400">
-              <v-img
-                      class="white--text"
-                      height="200px"
-                      src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
-              >
-                <v-card-title class="align-end fill-height">Top 10 Australian beaches</v-card-title>
-              </v-img>
-
-              <v-card-text>
-                <span>Number 10</span><br>
-                <span class="text--primary">
-        <span>Whitehaven Beach</span><br>
-        <span>Whitsunday Island, Whitsunday Islands</span>
-      </span>
-              </v-card-text>
-
-              <v-card-actions>
-                <v-btn
-                        text
-                        color="orange"
-                >
-                  Share
-                </v-btn>
-                <v-btn
-                        text
-                        color="orange"
-                >
-                  Explore
-                </v-btn>
-              </v-card-actions>
-            </v-card>
-
-          </v-col>
-          <v-col cols="3">
-            <v-card class="mx-auto" max-width="400">
-              <v-img
-                      class="white--text"
-                      height="200px"
-                      src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
-              >
-                <v-card-title class="align-end fill-height">Top 10 Australian beaches</v-card-title>
-              </v-img>
-
-              <v-card-text>
-                <span>Number 10</span><br>
-                <span class="text--primary">
-        <span>Whitehaven Beach</span><br>
-        <span>Whitsunday Island, Whitsunday Islands</span>
-      </span>
-              </v-card-text>
-
-              <v-card-actions>
-                <v-btn
-                        text
-                        color="orange"
-                >
-                  Share
-                </v-btn>
-                <v-btn
-                        text
-                        color="orange"
-                >
-                  Explore
-                </v-btn>
-              </v-card-actions>
-            </v-card>
-
-          </v-col>
-
-        </v-row>
-      </v-container>
+            </v-layout>
+        </v-flex>    
+    </v-layout>
     </div>
-  </div>
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        items: [
-          {
-            src: 'https://f.ptcdn.info/158/012/000/1384503471-5266374834-o.jpg',
-          },
-          {
-            src: require('@/assets/logo.png'),
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
-          },
-        ],
-      }
-    },
-  }
+ import facebookLogin from 'facebook-login-vuejs';
+
+ export default {
+     name: 'Root',
+     /*-------------------------Load Component---------------------------------------*/
+     components: {
+         facebookLogin
+     },
+     /*-------------------------Set Component---------------------------------------*/
+     props: {
+
+     },
+     /*-------------------------DataVarible---------------------------------------*/
+     data() {
+         return {
+             Facebook: {},
+             Status: false,
+             user: {},
+         };
+     },
+     /*-------------------------Run Methods when Start this Page------------------------------------------*/
+     async mounted() {
+         /**** Call loading methods*/
+         this.load();
+     },
+     /*-------------------------Run Methods when Start Routed------------------------------------------*/
+     async beforeRouteEnter(to, from, next) {
+         next()
+     },
+     /*-------------------------Vuex Methods and Couputed Methods------------------------------------------*/
+     computed: {
+
+     },
+     /*-------------------------Methods------------------------------------------*/
+     methods: {
+         loginFacebook(){
+              this.Status = true;
+              this.getFacebookProfile();
+         },
+         logoutFacebook() {
+             this.Status = false;
+             this.user = {};
+         },
+         getFacebookProfile() {
+             try {
+                 this.Facebook.api('/me', 'GET', {
+                         fields: 'id,name,email'
+                     },
+                     userInformation => {
+                          
+                         this.user = userInformation;
+                         this.user.img = `https://graph.facebook.com/${userInformation.id}/picture?type=large`;
+                     } 
+                 )
+             } catch (error) {
+
+             }
+
+         },
+         loadFacebook(facebook) {
+             console.log('[open api]', facebook);
+             this.Facebook = facebook.FB
+             if (facebook.isConnected) {
+                 this.Status = true;
+                 this.getFacebookProfile();
+             }
+         },
+         /******* Methods default run ******/
+         load: async function () {}
+     },
+ }
 </script>
 <style>
-
+.bg {
+  
+background-image: url('../assets/bg.jpg');
+background-attachment: fixed;
+background-size: cover;
+}
 </style>
