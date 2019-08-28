@@ -7,7 +7,8 @@
         >
             <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
-            <v-toolbar-title class="text-uppercase green--text">Tutor Mulberry</v-toolbar-title>
+            <v-toolbar-title class="text-uppercase "></v-toolbar-title>
+            <span color="blue-grey darken-3">Tutor</span>
             <router-link :to="{name: 'hello'}">not</router-link>
             <div class="flex-grow-1">
 
