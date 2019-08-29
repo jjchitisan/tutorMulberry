@@ -3,25 +3,27 @@
   
    <v-layout class="bg" row wrap style="height:200vh; widgth:300vw;">
      <v-container>
-     <v-layout row wrap>
+     <v-layout row wrap justify-center>
         <v-flex xs12 md4>
-        <v-btn  rounded block large  class="ma-3" color="grey darken-2 green--text">Software</v-btn>
+        <v-btn  rounded block large  class="ma-10" color="grey darken-2 green--text">Software</v-btn>
       </v-flex>
       <v-flex xs12 md4>
-        <v-btn  rounded block large  class="ma-3" color="grey darken-2 green--text">English</v-btn>
+        <v-btn  rounded block large  class="ma-10" color="grey darken-2 green--text">English</v-btn>
       </v-flex>
       <v-flex xs12 md4>
-        <v-btn rounded block large class="ma-3" color="grey darken-2 green--text">Thai languages</v-btn>
+        <v-btn rounded block large class="ma-10" color="grey darken-2 green--text">Thai languages</v-btn>
       </v-flex>
       <v-flex xs12 md4>
-        <v-btn rounded block large class="ma-3" color="grey darken-2 green--text">Mathematics</v-btn>
+        <v-btn rounded block large class="ma-10" color="grey darken-2 green--text">Mathematics</v-btn>
       </v-flex>
       <v-flex xs12 md4>
-        <v-btn rounded block large class="ma-3" color="grey darken-2 green--text">sciences</v-btn>
+        <v-btn rounded block large class="ma-10" color="grey darken-2 green--text">sciences</v-btn>
       </v-flex>
       <v-flex xs12 md4>
-        <v-btn rounded block large class="ma-3" color="grey darken-2 green--text">Total</v-btn>
+        <v-btn rounded block large class="ma-10" color="grey darken-2 green--text">Total</v-btn>
       </v-flex>
+  
+
   <v-flex xs12 md3>
    <v-card color="cyan lighten-5"
     style="border-radius:50px;"
@@ -31,7 +33,6 @@
   >
     <v-img
       class="white--text"
-      style="border-radius:50px;"
       height="200px"
       src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
     >
@@ -48,7 +49,7 @@
 
     <v-card-actions>
       <v-btn
-        outlined
+        outlined  
         color="green"
       >
         ดูข้อมูล
@@ -102,6 +103,48 @@
     </v-card-actions>
   </v-card>
   </v-flex>
+
+
+    <v-flex xs12 md3>
+   <v-card color="cyan lighten-5"
+    style="border-radius:50px;"
+    class="ma-3"
+    max-width="300"
+    min-height="400"
+  >
+    <v-img
+      class="white--text"
+      height="200px"
+      src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+    >
+      <v-card-title class="align-end fill-height"></v-card-title>
+    </v-img>
+
+    <v-card-text>
+      <span>ชื่อ</span><br>
+      <span class="text--primary">
+        <span>วิชาที่สอน</span><br>
+        <span>รายละเอียด,ราคา</span>
+      </span>
+    </v-card-text>
+
+    <v-card-actions>
+      <v-btn
+        outlined  
+        color="green"
+      >
+        ดูข้อมูล
+      </v-btn>
+      <v-btn
+        outlined
+        color="blue"
+      >
+        สมัครเรียน
+      </v-btn>
+    </v-card-actions>
+  </v-card>
+  </v-flex>
+
 
   <v-flex xs12 md3>
    <v-card color="cyan lighten-5"
