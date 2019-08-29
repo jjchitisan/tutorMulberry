@@ -42,6 +42,7 @@
      /*-------------------------DataVarible---------------------------------------*/
      data() {
          return {
+             
              Facebook: {},
              Status: false,
              user: {},
@@ -105,7 +106,7 @@
 <style>
 .bg {
   
-background-image: url('../assets/bg.jpg');
+background-image: url('../assets/bg3.jpg');
 background-attachment: fixed;
 background-size: cover;
 }
