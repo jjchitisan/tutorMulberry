@@ -4,7 +4,9 @@
         <v-flex xx6 >
             <v-layout row wrap fill-height justify-center align-center>
                 <div class="text-center">
-    
+                  <v-card-text>
+                      
+                  </v-card-text>      
                 
                 </div>
             </v-layout>

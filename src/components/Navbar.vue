@@ -1,10 +1,12 @@
 <template>
   <nav>
+   
     <v-app-bar absolute color="rgb(0,0,0,0)" dense class="elevation-0">
-      <v-toolbar-title></v-toolbar-title>
+      <v-toolbar-title> 
+      </v-toolbar-title>
       <v-btn
         dark
-        @click="$router.push('/')"
+        @click="router('/')"
         class="text-uppercase red--text accent-4"
         color="transparent"
         text
@@ -12,16 +14,17 @@
       <div class="flex-grow-1">
         <v-btn
           dark
-          @click="$router.push('/got')"
-          class="text-uppercase indigo--text darken-4"
+          @click="router('/got')"
+          class="text-uppercase red--text accent-4"
           color="transparent"
           outlined
           text
         >รายวิชา</v-btn>
+      
         <v-btn
           dark
-          @click="$router.push('/not')"
-          class="text-uppercase green--text darken-4"
+          @click="router('/not')"
+          class="text-uppercase red--text accent-4"
           color="transparent"
           outlined
           text
@@ -138,6 +141,9 @@ export default {
         this.Status = true;
         this.getFacebookProfile();
       }
+    },
+    async router(link){
+     await this.$router.push(link);
     },
     /******* Methods default run ******/
     load: async function() {}

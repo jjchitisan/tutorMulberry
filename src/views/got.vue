@@ -218,9 +218,9 @@ background-size: cover;
 <script>
 export default {
   data() {
-   
-    
-    
-  }
+    return {
+      
+    };
+  },
 }
 </script>

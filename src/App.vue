@@ -1,11 +1,14 @@
 <template>
-
-    <v-app>
-        <navbar/>
-        <v-content>
-            <router-view></router-view>
-        </v-content>
+<div id='app'>
+ <v-app>
+       <navbar/> 
+        
+        
+            <router-view />
+       
     </v-app>
+</div>
+   
 
 </template>
 
@@ -20,6 +23,10 @@
         data() {
             //
             return {}
+        },methods:{
+            async router(link){
+      await this.$router.push(link);
+    },
         }
     }
 </script>
