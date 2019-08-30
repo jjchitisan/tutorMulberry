@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <v-layout column justify-center align-center>
+  <div class="bg">
+    <v-layout column justify-center align-center style="height:100vh; width: 100vw;">
       <v-card class style="margin-top:5%; width:70%;">
         <v-toolbar color="amber darken-3" dark>Information</v-toolbar>
         <v-layout row wrap>
@@ -31,3 +31,11 @@
 <script>
 export default {};
 </script>
+<style>
+.bg {
+  
+background-image: url('../assets/bg3.jpg');
+background-attachment: fixed;
+background-size: cover;
+}
+</style>

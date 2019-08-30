@@ -192,12 +192,13 @@
     </v-card-actions>
   </v-card>
   </v-flex>
-  <div class="aling-end">
+  
     <v-spacer></v-spacer>
-           <v-btn @click="router('/aou')">
-             fontpage
-           </v-btn>
-   </div>
+       <div>
+        <v-btn @click="router('aou')" class="ma-2" color="red" dark>
+            <v-icon dark></v-icon>create
+          </v-btn>
+       </div>
 
    
       </v-layout>
@@ -220,11 +221,42 @@ background-size: cover;
 </style>
 
 <script>
+
 export default {
+  name: "Root",
+  /*-------------------------Load Component---------------------------------------*/
+  components: {
+    
+  },
+  /*-------------------------Set Component---------------------------------------*/
+  props: {},
+  /*-------------------------DataVarible---------------------------------------*/
   data() {
-   
+    return {
+      
+    };
+  },
+  /*-------------------------Run Methods when Start this Page------------------------------------------*/
+  async mounted() {
+    /**** Call loading methods*/
+    this.load();
+  },
+  /*-------------------------Run Methods when Start Routed------------------------------------------*/
+  async beforeRouteEnter(to, from, next) {
+    next();
+  },
+  /*-------------------------Vuex Methods and Couputed Methods------------------------------------------*/
+  computed: {},
+  /*-------------------------Methods------------------------------------------*/
+  methods: {
     
+      //location.reload()
     
+    async router(link){
+     await this.$router.push(link);
+    },
+    /******* Methods default run ******/
+    load: async function() {}
   }
-}
+};
 </script>
