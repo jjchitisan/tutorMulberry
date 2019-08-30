@@ -1,33 +1,36 @@
 <template>
   <div>
-  
+     
+   
    <v-layout class="bg" row wrap style="height:200vh; widgth:300vw;">
+      
      <v-container>
+       
      <v-layout row wrap justify-center>
-        <v-flex xs12 md4>
-        <v-btn  rounded block large  class="ma-10" color="blue lighten-4 black--text">Software</v-btn>
+       <v-flex xs12 md4>
+        <v-btn  rounded block large  class="mt-10" color="blue lighten-4 black--text">Software</v-btn>
       </v-flex>
       <v-flex xs12 md4>
-        <v-btn  rounded block large  class="ma-10" color="blue lighten-4 black--text">English</v-btn>
+        <v-btn  rounded block large  class="mt-10" color="blue lighten-4 black--text">English</v-btn>
       </v-flex>
       <v-flex xs12 md4>
-        <v-btn rounded block large class="ma-10" color="blue lighten-4 black--text">Thai languages</v-btn>
+        <v-btn rounded block large class="mt-10" color="blue lighten-4 black--text">Thai languages</v-btn>
       </v-flex>
       <v-flex xs12 md4>
-        <v-btn rounded block large class="ma-10" color="blue lighten-4 black--text">Mathematics</v-btn>
+        <v-btn rounded block large class="mb-10 ma-3" color="blue lighten-4 black--text">Mathematics</v-btn>
       </v-flex>
       <v-flex xs12 md4>
-        <v-btn rounded block large class="ma-10" color="blue lighten-4 black--text">sciences</v-btn>
+        <v-btn rounded block large class="mb-10 ma-3" color="blue lighten-4 black--text">sciences</v-btn>
       </v-flex>
       <v-flex xs12 md4>
-        <v-btn rounded block large class="ma-10" color="blue lighten-4 black--text">Total</v-btn>
+        <v-btn rounded block large class="mb-10 ma-3" color="blue lighten-4 black--text">Total</v-btn>
       </v-flex>
   
 
   <v-flex xs12 md3>
    <v-card color="cyan lighten-4"
     style="border-radius:50px;"
-    class="ma-3"
+    class="ma-5"
     max-width="300"
     min-height="400"
     elevation="9"
@@ -68,7 +71,7 @@
   <v-flex xs12 md3>
    <v-card color="cyan lighten-4"
     style="border-radius:50px;"
-    class="ma-3"
+    class="ma-5"
     max-width="300"
     min-height="400"
     elevation="9"
@@ -110,7 +113,7 @@
     <v-flex xs12 md3>
    <v-card color="cyan lighten-4"
     style="border-radius:50px;"
-    class="ma-3"
+    class="ma-5"
     max-width="300"
     min-height="400"
     elevation="9"
@@ -152,7 +155,7 @@
   <v-flex xs12 md3>
    <v-card color="cyan lighten-4"
     style="border-radius:50px;"
-    class="ma-3"
+    class="ma-5"
     max-width="300"
     min-height="400"
     elevation="9"
@@ -189,16 +192,17 @@
     </v-card-actions>
   </v-card>
   </v-flex>
-
-
-
-  
-
+  <div class="aling-end">
+    <v-spacer></v-spacer>
+           <v-btn @click="router('/aou')">
+             fontpage
+           </v-btn>
+   </div>
 
    
       </v-layout>
   </v-container>
-
+   
   
 
 
@@ -218,9 +222,9 @@ background-size: cover;
 <script>
 export default {
   data() {
-    return {
-      
-    };
-  },
+   
+    
+    
+  }
 }
 </script>
